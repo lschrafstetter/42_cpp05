@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 09:43:47 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/10/06 10:37:46 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/10/06 10:47:12 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,18 +46,14 @@ class Bureaucrat {
 
   // Exceptions
   class GradeTooHighException : public std::exception {
-   public:
-    virtual const char *what() const throw() {
-      return "The bureaucrat grade that was tried to set was too high!";
-    }
-  };
-
-  class GradeTooLowException : public std::exception {
-   public:
-    virtual const char *what() const throw() {
-      return "The bureaucrat grade that was tried to set was too low!";
-    }
-  };
+	 public:
+		virtual const char *what() const throw();
+	};
+	
+  class GradeTooLowException: public std::exception {
+	 public:
+		virtual const char *what() const throw();
+	};
 
  private:
   // Default constructor and copy assignment operator overload private, because
