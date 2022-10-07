@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 09:04:49 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/10/07 10:06:42 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/10/07 10:12:48 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,21 @@ int main(void) {
 	Form f6(f4);
 	abby.signForm(f3);
 	abby.signForm(f4);
+	
+	try {
+		f4.beSigned(abby);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
+	
 	abby.signForm(f5);
 	abby.signForm(f6);
+
+	try {
+		f6.beSigned(abby);
+	}
+	catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
+	}
 }
