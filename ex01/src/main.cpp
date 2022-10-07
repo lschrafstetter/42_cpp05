@@ -6,7 +6,7 @@
 /*   By: lschrafs <lschrafs@student.42wolfsburg.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 09:04:49 by lschrafs          #+#    #+#             */
-/*   Updated: 2022/10/07 10:12:48 by lschrafs         ###   ########.fr       */
+/*   Updated: 2022/10/07 11:25:34 by lschrafs         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,12 @@ int main(void) {
 	Form f4("Presidential form", 74, 150);
 	Form f5(f3);
 	Form f6(f4);
+
+	std::cout << f3 << std::endl
+						<< f4 << std::endl
+						<< f5 << std::endl
+						<< f6 << std::endl;
+	
 	abby.signForm(f3);
 	abby.signForm(f4);
 	
@@ -56,4 +62,9 @@ int main(void) {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+
+	std::cout << f3 << std::endl
+						<< f4 << std::endl
+						<< f5 << std::endl
+						<< f6 << std::endl;
 }
